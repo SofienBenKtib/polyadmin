@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<BackofficePfa.Models.Entities.Instructor>
+
+<h1>Instructors :</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Full Name</td>
+            <td>Email</td>
+            <td>Subject</td>
+            <td>Available for night classes</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instructor in Model)
+        {
+            <tr>
+                <td>@instructor.Name</td>
+                <td>@instructor.Email</td>
+                <td>@instructor.Subject</td>
+                <td>@instructor.NightClasses</td>
+                <td><a class="btn btn-primary" asp-route-id="@instructor.Id" asp-controller="Instructor" asp-action="Edit">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
