@@ -1,4 +1,5 @@
-﻿@{
+﻿@model BackofficePfa.Models.HomeViewModel
+@{
     ViewData["Title"] = "Home Page";
     DateTime now = DateTime.Now;
     string formattedDate = now.ToString("dd-MM-yyyy HH:mm:ss");
@@ -14,22 +15,22 @@
         <div class="card mx-3" style="width: 20rem; background-color:#3C5B6F; border:none">
             <div class="card-body">
                 <h5 class="card-title" style="color:white">Students</h5>
-                <p class="card-text" style="color:white">You have 128 student registered</p>
-                <a href="#" class="card-link" style="color:white">Card link</a>
+                <p class="card-text" style="color:white">You have <u><b>@Model.Students</b> students</u> registered</p>
+                <a href="students/list" class="card-link" style="color:white">View students list</a>
             </div>
          </div>
         <div class="card mx-3" style="width: 20rem; background-color:#948979;  border:none">
         <div class="card-body">
             <h5 class="card-title" style="color:white">Instructors</h5>
-                <p class="card-text" style="color:white">You have 36 Instructor registered</p>
-                <a href="#" class="card-link" style="color:white">Card link</a>
+                <p class="card-text" style="color:white">You have <u><b>@Model.Instructors</b> Instructors</u> registered</p>
+                <a href="instructor/list" class="card-link" style="color:white">View instructors list</a>
         </div>
         </div>
         <div class="card mx-3" style="width: 20rem; background-color:#DFD0B8;  border:none">
         <div class="card-body">
             <h5 class="card-title" style="color:white">Staff</h5>
-                <p class="card-text" style="color:white">You have 12 Instructor registered</p>
-                <a href="#" class="card-link" style="color:white">Card link</a>
+                <p class="card-text" style="color:white">You have <u><b>@Model.Admins</b> personnels</u> registered</p>
+                <a href="admin/list" class="card-link" style="color:white">View personnels list</a>
         </div>
     </div>
 </div>

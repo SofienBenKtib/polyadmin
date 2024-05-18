@@ -11,6 +11,7 @@
 </head>
 <body>
     <header>
+        @if (ViewData["HideNavbar"] == null || !(bool)ViewData["HideNavbar"]){
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="user-select:none">Poly-Admin</a>
@@ -32,7 +33,6 @@
                                 <ul class="dropdown-menu" style="padding:8px">
                                     <li><a class="dropdown-item" asp-controller="Students" asp-action="Add"><i class="bi bi-person-plus-fill" style="margin-right:5px"></i>Add a student</a></li>
                                     <li><a class="dropdown-item" asp-controller="Students" asp-action="List"><i class="bi bi-eye-fill" style="margin-right:5px"></i>View Students List</a></li>
-
                                 </ul>
                             </div>
                         </li>
@@ -52,18 +52,24 @@
                             <div class="btn-group">
                                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-people-fill"></i>
-                                    Administrators & Staff
+                                    Staff & Personnel
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" asp-controller="Instructor" asp-action="Add"><i class="bi bi-person-plus-fill" style="margin-right:5px"></i>Add an Instructor</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Instructor" asp-action="List"><i class="bi bi-eye-fill" style="margin-right:5px"></i>View Instructors List</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="Add"><i class="bi bi-person-plus-fill" style="margin-right:5px"></i>Add Staff & Personnel</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="List"><i class="bi bi-eye-fill" style="margin-right:5px"></i>View List</a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Logout</a>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </nav>
+        }
     </header>
     <div class="container">
         <main role="main" class="pb-3">

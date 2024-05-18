@@ -1,8 +1,11 @@
-﻿namespace BackofficePfa.Models.Entities
+﻿namespace BackofficePfa.Models
 {
-    public class Administrator
+
+    /// <summary>
+    /// The view model is used to bind data when submit the form
+    /// </summary>
+    public class AddAdminViewModel
     {
-        public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Email { get; set; }
         public string? Phone { get; set; }

@@ -60,8 +60,18 @@ namespace BackofficePfa.Controllers
                 instructor.NightClasses = viewModel.NightClasses;
                 await dbContext.SaveChangesAsync();
             }
-            return RedirectToAction("List", "Instructors");
+            return RedirectToAction("List", "Instructor");
+        }
+        [HttpPost]
+        public async Task<IActionResult> Delete(Instructor viewModel)
+        {
+            var instructor = await dbContext.Instructors.AsNoTracking().FirstOrDefaultAsync(x => x.Id == viewModel.Id);
+            if (instructor is not null)
+            {
+                dbContext.Instructors.Remove(viewModel);
+                await dbContext.SaveChangesAsync();
+            }
+            return RedirectToAction("List", "Instructor");
         }
     }
 }
-//1:00:52
