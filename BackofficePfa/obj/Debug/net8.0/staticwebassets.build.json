@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kcUWVz/tGDYZzr15uZH2Nth4nW7kc04dl7SD0yBz86s=",
+  "Hash": "ELSXTUGdLI6EodGsZLyUkT/WPoSC9ehSsTFG2oBnXs8=",
   "Source": "BackofficePfa",
   "BasePath": "_content/BackofficePfa",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Steven\\Desktop\\BackofficePfa\\BackofficePfa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BackofficePfa.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\BackofficePfa\\BackofficePfa\\wwwroot\\css\\login.css",
+      "SourceId": "BackofficePfa",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\BackofficePfa\\BackofficePfa\\wwwroot\\",
+      "BasePath": "_content/BackofficePfa",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "C:\\Users\\Steven\\Desktop\\BackofficePfa\\BackofficePfa\\wwwroot\\css\\site.css",

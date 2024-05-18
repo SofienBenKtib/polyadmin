@@ -1,3 +1,4 @@
+using BackofficePfa.Data;
 using BackofficePfa.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -8,14 +9,19 @@ namespace BackofficePfa.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _dbContext;
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext dbContext)
         {
             _logger = logger;
+            _dbContext = dbContext;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var students = _dbContext.Students.Count();
+            var instructors = _dbContext.Instructors.Count();
+            var admins = _dbContext.Administrators.Count();
+            return View(new HomeViewModel { Students = students, Instructors = instructors, Admins = admins });
         }
 
         public IActionResult Privacy()
